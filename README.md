@@ -58,18 +58,7 @@ The recurrence is correct. The base cases indicate that if either string has a l
                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 
 
-       Start at i = m and j = n
-       While i > 0 and j > 0:
-           If A[i-1] == B[j-1]:
-               Add A[i-1] to the result
-               Move diagonally i-- and j--
-           Else if dp[i-1][j] >= dp[i][j-1]:
-               Move up i--
-           Else:
-               Move left j--
-
-    Reverse subsequence
-    Return dp[m][n] and subsequence
+    Return dp[m][n]
 
 ### Analysis
-The algorithm fills a table with m*n entries where m and n are the lengths of the two strings A and B. Every entry is computed in constant time but with nm entries this step takes O(mn) time total. The backtracking step moves through the table from the bottom right corner to the top left corner taking at most O(m + n) time because you either move diagonal, up, or left so the most amount of possible steps to take is total entires which is m + n. Therefore the overall runtime is O(mn) since it grows much faster in comparison to O(m + n).
+The algorithm fills a table with m*n entries where m and n are the lengths of the two strings A and B. Every entry is computed in constant time but with nm entries this step takes O(mn) time total. Therefore the overall runtime is O(mn).
