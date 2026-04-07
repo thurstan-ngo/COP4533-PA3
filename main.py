@@ -48,8 +48,8 @@ def main():
             value_dict[char] = value
         
         # Read the two strings
-        first_str = file.readline()
-        second_str = file.readline()
+        first_str = file.readline().strinp()
+        second_str = file.readline().strip()
     
     # Run the dynamic programming algorithm and output results
     max_value, subsequence = hvlcs(first_str, second_str, value_dict)
