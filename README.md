@@ -45,3 +45,31 @@ The recurrence is correct. The base cases indicate that if either string has a l
 
 ## Question 3: Big-Oh
 
+### Pseudocode
+    Let A and B be the two input strings
+    Let m = length of A and n = length of B  
+    Create a 2D table dp of size (m+1) x (n+1) initialized to 0  
+
+    For each i from 1 to m:
+       For each j from 1 to n:
+           If A[i-1] is equal to B[j-1]:
+               dp[i][j] = dp[i-1][j-1] + value of A[i-1]
+           Else:
+               dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+
+
+       Start at i = m and j = n
+       While i > 0 and j > 0:
+           If A[i-1] == B[j-1]:
+               Add A[i-1] to the result
+               Move diagonally i-- and j--
+           Else if dp[i-1][j] >= dp[i][j-1]:
+               Move up i--
+           Else:
+               Move left j--
+
+Reverse subsequence
+Return dp[m][n] and subsequence
+
+### Analysis
+The algorithm fills a table with m*n entries where m and n are the lengths of the two strings A and B. Every entry is computed in constant time but with nm entries this step takes O(mn) time total. The backtracking step moves through the table from the bottom right corner to the top left corner taking at most O(m + n) time because you either move diagonal, up, or left so the most amount of possible steps to take is total entires which is m + n. Therefore the overall runtime is O(mn) since it grows much faster in comparison to O(m + n).
