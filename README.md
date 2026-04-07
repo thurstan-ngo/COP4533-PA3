@@ -68,8 +68,8 @@ The recurrence is correct. The base cases indicate that if either string has a l
            Else:
                Move left j--
 
-Reverse subsequence
-Return dp[m][n] and subsequence
+    Reverse subsequence
+    Return dp[m][n] and subsequence
 
 ### Analysis
 The algorithm fills a table with m*n entries where m and n are the lengths of the two strings A and B. Every entry is computed in constant time but with nm entries this step takes O(mn) time total. The backtracking step moves through the table from the bottom right corner to the top left corner taking at most O(m + n) time because you either move diagonal, up, or left so the most amount of possible steps to take is total entires which is m + n. Therefore the overall runtime is O(mn) since it grows much faster in comparison to O(m + n).
