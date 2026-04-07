@@ -53,7 +53,7 @@ The recurrence is correct. The base cases indicate that if either string has a l
     For each i from 1 to m:
        For each j from 1 to n:
            If A[i-1] is equal to B[j-1]:
-               dp[i][j] = dp[i-1][j-1] + value of A[i-1]
+               dp[i][j] = dp[i-1][j-1] + 1
            Else:
                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 
