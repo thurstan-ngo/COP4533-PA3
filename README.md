@@ -3,10 +3,8 @@ Thurstan Ngo - 86963382
 Syed Rahman - 95234900
 
 ## Running the Program
-Type `python3 main.py input_file.txt` into the terminal to run the program (python3 may not be the command setup on your machine in which case you need to use what your computer has it set to)
-
-## Assumptions
-
+Type `python3 main.py data/input_file.txt` into the terminal to run the program (python3 may not be the command setup on your machine in which case you need to use what your computer has it set to)
+* Replace `input_file.txt` with one of the input files: `input1.txt`, `input2.txt`, `input3.txt`, `input4.txt`, `input5.txt`, `input6.txt`, `input7.txt`, `input8.txt`, `input9.txt`, `input10.txt`
 
 ## Question 1: Empirical Comparison
 | File        | Length of A | Length of B | Runtime(ms)  |
