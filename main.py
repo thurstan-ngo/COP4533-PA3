@@ -1,4 +1,5 @@
 import sys
+import time
 
 def hvlcs(A, B, value_dict):
     m, n = len(A), len(B)
@@ -48,13 +49,19 @@ def main():
             value_dict[char] = value
         
         # Read the two strings
-        first_str = file.readline().strinp()
+        first_str = file.readline().strip()
         second_str = file.readline().strip()
-    
+
+    # Start measuring runtime
+    start = time.perf_counter()
     # Run the dynamic programming algorithm and output results
     max_value, subsequence = hvlcs(first_str, second_str, value_dict)
+    # End Runtime
+    end = time.perf_counter()
+
     print(max_value)
     print(subsequence)
+    print(f"Runtime: {(end - start) * 1000:.3f} ms")
     
 
 if __name__ == '__main__':
