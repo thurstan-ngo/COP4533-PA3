@@ -9,6 +9,22 @@ Type `python3 main.py input_file.txt` into the terminal to run the program (pyth
 
 
 ## Question 1: Empirical Comparison
+| File        | Length of A | Length of B | Runtime(ms)  |
+|-------------|-------------|-------------|--------------|
+| input1.txt  | 25          | 25          | 0.327        |
+| input2.txt  | 30          | 30          | 0.505        |
+| input3.txt  | 35          | 35          | 0.547        |
+| input4.txt  | 40          | 40          | 0.739        |
+| input5.txt  | 45          | 45          | 0.947        |
+| input6.txt  | 50          | 50          | 1.242        |
+| input7.txt  | 60          | 60          | 1.410        |
+| input8.txt  | 70          | 70          | 1.565        |
+| input9.txt  | 90          | 90          | 2.114        |
+| input10.txt | 100         | 100         | 2.729        |
+
+![Runtime Graph](runtimegraph.png)
+
+The runtime increases as the input size increases. This matches the expected results of the DP algorithm which fills an m*n table thus runs in O(mn) time.
 
 
 ## Question 2: Recurrence Equation

@@ -61,7 +61,8 @@ def main():
 
     print(max_value)
     print(subsequence)
-    print(f"Runtime: {(end - start) * 1000:.3f} ms")
+    # Commented out because spec says output should be value and subsequence
+    #print(f"Runtime: {(end - start) * 1000:.3f} ms")
     
 
 if __name__ == '__main__':
